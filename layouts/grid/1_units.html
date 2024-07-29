@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+  </head>
+  <style>
+    .grid-container {
+      width: 1000px;
+      display: grid;
+      grid-template-rows: repeat(2, 150px);
+      grid-template-columns: 50% repeat(2, 1fr);
+      gap: 10px;
+      height: 50vh;
+      border: 1px solid;
+    }
+
+    header { border: 5px solid red; }
+    nav { border: 5px solid blue; }
+    main { border: 5px solid aquamarine; }
+    aside { border: 5px solid chocolate; }
+    footer { border: 5px solid green; }
+  </style>
+  <body>
+    <div class="grid-container">
+      <header>Header</header>
+      <nav>Navigation</nav>
+      <main>Main Content</main>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+    <p>We can define the width of rows or columns as follows,
+      <ol>
+        <li><b>Individually: grid-template-*: 150px 150px 200px;</b> Used to define different values</li>
+        <li><b>Using repeat fn: grid-template-*: repeat(2, 150px) 200px;</b> Used to avoid repeatability</li>
+        <li><b>Using fractional-unit(fr): grid-template-*: repeat(2, 1fr) 200px;</b> Used to equally divide available space
+          values to specified rows/columns. available space(gap value - is not taken into account) </li>
+        <li><b>Other units: %, px, rem, em.</b> Other units are also accepted</li>
+      </ol>
+    </p>
+  </body>
+</html>

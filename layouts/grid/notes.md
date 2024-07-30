@@ -29,3 +29,28 @@
 **Cons:**
 
 - Not fully supported in older browsers.
+
+====================================
+CONCEPTS
+====================================
+**1. Units**
+
+- fr = fractional unit
+- min-content
+- max-content
+- px, %, rem, em
+
+
+**2. Positioning**
+
+- By default grid cells will be positioned based on normal document flow.
+- If we need to change their position then we can do as follows
+  -  shorthand: grid-row: 2 / 3;
+  (or)
+  -  defining start and end grid line: grid-row-start: 2, grid-row-end: 3
+  (or)
+  - for most readable and scalable way: we use grid cell names
+    - We need to make changes at the “grid-template-*”
+    - We need to use them declare them instead of line/track numbers
+    - grid-template-rows: [header-start] 150px [header-end box-start] 200px [box-end];
+

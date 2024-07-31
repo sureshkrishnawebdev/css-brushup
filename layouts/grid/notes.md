@@ -41,16 +41,29 @@ CONCEPTS
 - px, %, rem, em
 
 
-**2. Positioning**
+**2. Positioning/ Spanning**
 
 - By default grid cells will be positioned based on normal document flow.
 - If we need to change their position then we can do as follows
-  -  shorthand: grid-row: 2 / 3;
+  1-  shorthand: (grid-row: 2 / 3)
   (or)
-  -  defining start and end grid line: grid-row-start: 2, grid-row-end: 3
+  2-  defining start and end grid line: (grid-row-start: 2, grid-row-end: 3)
   (or)
-  - for most readable and scalable way: we use grid cell names
+  3- for most readable and scalable way: we use grid cell names
     - We need to make changes at the “grid-template-*”
     - We need to use them declare them instead of line/track numbers
-    - grid-template-rows: [header-start] 150px [header-end box-start] 200px [box-end];
+    - (grid-template-rows: [header-start] 150px [header-end box-start] 200px [box-end])
 
+  - Based on our boundary, positioning can be differentiated
+    1- positioning: Involves explicitly defining the start and end.
+      eg: (gird-row-start: 1, grid-row-end: 3) == (grid-row: 1 / 3)
+
+    2- spanning: For dynamic usage, with the help of key "span"
+      eg: (grid-row: 1/ span 2);
+
+**3. Types of grid**
+
+- Explicit Grid: Defined by properties like "grid-template-rows" and "grid-template-columns".
+
+- Implicit Grid: Automatically generated when items are placed outside the explicitly defined grid.
+  - Control Implicit Grid: Use "grid-auto-rows" and "grid-auto-columns" to control the size of implicitly created tracks.

@@ -30,9 +30,10 @@
 
 - Not fully supported in older browsers.
 
-====================================
-CONCEPTS
-====================================
+
+### CONCEPTS
+
+
 **1. Units**
 
 - fr = fractional unit
@@ -63,7 +64,7 @@ CONCEPTS
 
 **3. Types of grid**
 
-- Explicit Grid: Defined by properties like "grid-template-rows" and "grid-template-columns".
+- _Explicit Grid:_ Defined by properties like "grid-template-rows" and "grid-template-columns".
 
-- Implicit Grid: Automatically generated when items are placed outside the explicitly defined grid.
+- _Implicit Grid:_ Automatically generated when items are placed outside the explicitly defined grid.
   - Control Implicit Grid: Use "grid-auto-rows" and "grid-auto-columns" to control the size of implicitly created tracks.

@@ -67,4 +67,28 @@
 - _Explicit Grid:_ Defined by properties like "grid-template-rows" and "grid-template-columns".
 
 - _Implicit Grid:_ Automatically generated when items are placed outside the explicitly defined grid.
-  - Control Implicit Grid: Use "grid-auto-rows" and "grid-auto-columns" to control the size of implicitly created tracks.
+  - Control Implicit Grid: we use below properties to control the size of implicitly created tracks.
+    1. "grid-auto-rows" -> to set the row width.
+    2. "grid-auto-columns" -> to set the column width.
+    3. "grid-auto-flow"
+      1-> [row(default), column  dense] -> how do we need to add the implicit grid.
+      2-> [dense] -> By default, grid algorithm tries to align items in normal document flow. There by when it encounters there may be scenario, a space(whole) will be created based on element spacing.
+
+**4. Alignment**
+- grid container: [width, height]
+- grid area: [grid-template-*]
+- align = vertical = column
+- justify = horizontal = row
+
+1 - To align items inside the grid area
+  - "align-items" -> vertical alignment
+  - "justify-items" -> horizontal alignment
+
+2 - For individual items to override the alignment specified for grid area
+  - "align-self" -> vertical alignment[override - align-items]
+  - "justify-self" -> horizontal alignment[override - justify-items]
+
+3 - Alignment of grid tracks
+  - In general,  if the grid area is smaller than the grid container, then [align-items*, align-self*] props won't provide the flexibility to align grid area.
+  - "align-content" -> vertical alignment
+  - "justify-content" -> horizontal alignment

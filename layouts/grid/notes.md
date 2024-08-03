@@ -36,10 +36,14 @@
 
 **1. Units**
 
-- fr = fractional unit
-- min-content
-- max-content
-- px, %, rem, em
+    1 - px, %, rem, em
+    2 - fr = fractional unit
+      -> it fills up the entire remaining space but it is never smaller than the minimum content of the row or column.
+        * "normal": [repeat(3, 1fr), width: 600px] => 1fr = 200px[all 3 columns]
+        * "min-content > 1fr value": [repeat(3, 1fr), width: 600px, width of content in 3rd column is 300px] => 1fr = 150px(1st 2 columns), 3rd column = 300px
+    3 - min-content
+    4 - max-content
+    5 - minmax(200px, 50%) -> by default the column will have max value on shrinking it will try to not to go beyond the min value
 
 
 **2. Positioning/ Spanning**

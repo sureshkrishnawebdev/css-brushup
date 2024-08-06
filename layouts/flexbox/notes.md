@@ -31,3 +31,35 @@
 
 - Not ideal for complex two-dimensional layouts (use CSS Grid instead)
 - Not fully supported in older browsers.
+
+### CONCEPTS
+
+
+**1. Units**
+
+  - px, %, rem, em
+
+**2. Positioning**
+
+  - main axis(horizontal): justify-content: center; //flex-start(D),flex-end, space-*(* - between, around, evenly), reverse
+  - cross axis(vertical): align-items: center; //stretch(D), flex-start, flex-end
+  - changing the main axis: flex-direction: row(D), //column
+
+**3. Alignment**
+
+  - viewport: [width, height]
+  - flex-container: [row, column]
+  - align = vertical = column
+  - justify = horizontal = row
+
+1 - To align items inside the flex container
+  - "align-items" -> vertical alignment
+  - "justify-content" -> horizontal alignment
+  - if main axis: row
+
+2 - For individual items to override the alignment specified for flex container
+  - "align-self" -> vertical alignment[override - align-items]
+
+3 - Alignment of flex tracks
+  - In general,  if the flex container is smaller than the viewport, then [align-items*, align-self*] props won't provide the flexibility to align flex container.
+  - "align-content" -> vertical alignment

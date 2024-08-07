@@ -62,4 +62,4 @@
 
 3 - Alignment of flex tracks
   - In general,  if the flex container is smaller than the viewport, then [align-items*, align-self*] props won't provide the flexibility to align flex container.
-  - "align-content" -> vertical alignment
+  - "align-content" -> vertical alignment -> well observed when we have flex property as wrap(i.e. when we have multiple rows)

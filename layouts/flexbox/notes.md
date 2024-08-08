@@ -21,6 +21,7 @@
 - Then, you can align flex items in both axis by specifying below declarations on flex container
   - main axis(horizontal): justify-content: center;
   - cross axis(vertical): align-items: center;
+- By default, flex container always tries to shrink down elements(flex-items) to smallest as they get.
 
 **Pros:**
 
@@ -63,3 +64,14 @@
 3 - Alignment of flex tracks
   - In general,  if the flex container is smaller than the viewport, then [align-items*, align-self*] props won't provide the flexibility to align flex container.
   - "align-content" -> vertical alignment -> well observed when we have flex property as wrap(i.e. when we have multiple rows)
+
+**4. shorthands**
+
+  1 - flex: [flex-grow flex-shrink flex-basis]
+    -> when we set the value of [flex: 1] -> it changes default values as follows [grow(0 -> 1) shrink(1 -> NA) basis(auto -> 0%)]
+
+  2 - flex-flow: [flex-direction flex-wrap]
+
+
+### Doubts
+  - How does the flex works?. How it manages the space?

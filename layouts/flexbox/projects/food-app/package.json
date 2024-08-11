@@ -1,0 +1,14 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "Delicious food at one click",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "SK",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}

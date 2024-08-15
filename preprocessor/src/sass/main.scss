@@ -1,0 +1,13 @@
+/*
+====== 1. Nesting ======
+*/
+.nesting {
+
+  &__container {
+    display: flex;
+  }
+
+  @media (min-width: 45em) {
+    padding: 2em;
+  }
+}

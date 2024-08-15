@@ -1,0 +1,32 @@
+@use 'sass:map';
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+/*
+====== 2. Mixins ======
+*/
+
+@mixin flex($direction, $justify, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+
+  @if $direction == row {
+    gap: 1rem;
+  }
+}
+
+@mixin media-query($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}

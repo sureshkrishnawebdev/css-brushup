@@ -40,3 +40,10 @@
       }
     }
   ```
+=======================================================
+### Sass: Features
+
+**1. nesting**
+  - we can nest the selectors inside one another
+  - we could also specify respective media queries inside the selector there by code is organized in single place. If we need to have media queries with specific width to be grouped we could use postprocessor in that case.
+  - Recommendation: single level of nesting, using media queries in here for dev

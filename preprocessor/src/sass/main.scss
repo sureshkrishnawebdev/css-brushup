@@ -1,16 +1,24 @@
-@import "./mixins";
+@use "index" as *;
+
+// @use "./mixins" as mix;
+// @use "./variables" as var;
+
+// @import 'mixins';
+// @import 'variables';
 
 /*
 ====== 1. Nesting ======
 */
+
 .nesting {
   &__container {
+    color: $mix-clr-black;
     background-color: tomato;
 
-    @include flex(row, $justify: center);
+    @include mix-flex(row, $justify: center);
   }
 
-  @include media-query(lg) {
+  @include mix-media-query(lg) {
     &__container {
       background-color: lightblue;
     }

@@ -1,0 +1,18 @@
+@import "./mixins";
+
+/*
+====== 1. Nesting ======
+*/
+.nesting {
+  &__container {
+    background-color: tomato;
+
+    @include flex(row, $justify: center);
+  }
+
+  @include media-query(lg) {
+    &__container {
+      background-color: lightblue;
+    }
+  }
+}

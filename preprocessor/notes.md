@@ -45,5 +45,27 @@
 
 **1. nesting**
   - we can nest the selectors inside one another
-  - we could also specify respective media queries inside the selector there by code is organized in single place. If we need to have media queries with specific width to be grouped we could use postprocessor in that case.
+  - we could also specify respective media queries inside the selector there by code is organized in single place. If we need to have media queries with specific width to be grouped we could use postprocessing tools.
   - Recommendation: single level of nesting, using media queries in here for dev
+
+**2. mixin**
+  - Used for reusing/encapsulating the styles(copy styles into the current style rule)
+  - It helps us to be DRY
+  - mixins works well with maps(i.e. arrays)
+  - Recommendation: media query, content
+  - Link: https://sass-lang.com/documentation/at-rules/mixin/
+
+**3. partials**
+  - Partials in Sass helps us to break our files into small files without affecting performance which makes development easy and while compiling it turns into single file
+  - an Sass file preceded by an underscore(_color)
+  - Link: https://sass-guidelin.es/#architecture
+
+**4. extend**
+  - Used to inherit styles(updates style rules that contain the extended selector)
+  - Combine selectors in the output CSS, creating a comma-separated list of selectors sharing the same properties.
+  - Link: https://sass-lang.com/documentation/at-rules/extend/
+
+**5. others**
+  - build-in modules: maps, math, color, list
+  - at-rules: use, mixin, include, extend, forward, content, function, error, debug
+  - flow-control: @each, @for

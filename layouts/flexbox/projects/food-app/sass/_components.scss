@@ -129,6 +129,22 @@
   list-style: none;
 
   &__item {
+    position: relative;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: var(--color-primary-light);
+    transition: transform .2s;
+  }
+
+  &__item:hover::before {
+    transform: scaleY(1.5);
   }
 
   &__link {

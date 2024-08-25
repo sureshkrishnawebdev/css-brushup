@@ -190,3 +190,15 @@
   color: var(--color-grey-light-1);
   padding: 1.5rem;
 }
+
+// ***************************************
+// GALLERY
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}

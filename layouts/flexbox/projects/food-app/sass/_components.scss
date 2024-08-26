@@ -202,3 +202,33 @@
     display: block;
   }
 }
+
+// ***************************************
+// OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+
+  &__heading {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary-light);
+  }
+
+  &__stars {
+    margin-right: auto;
+  }
+
+  &__location {}
+
+  &__rating {}
+}

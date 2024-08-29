@@ -8,8 +8,9 @@
 
 .header {
   height: 7rem;
-  background-color: #fff;
   font-size: 1.4rem;
+  background-color: #fff;
+  border-bottom: var(--line);
 
   display: flex;
   justify-content: space-between;
@@ -32,7 +33,26 @@
 .main {
   flex: 1;
   background-color: #fff;
+}
 
-  //TEST
-  height: 70rem;
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+}
+
+.description {
+  flex: 0 0 60%;
+  padding: 3rem;
+  font-size: 1.4rem;
+  box-shadow: var(--shadow-light);
+  background-color: #fff;
+  color: var(--color-grey-dark-2);
+}
+
+.user-reviews {
+  flex: 1;
+  margin-left: 4.5rem;
+  background-color: yellowgreen;
 }

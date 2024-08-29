@@ -44,13 +44,15 @@
 
 .description {
   flex: 0 0 60%;
+  padding: 3rem;
+  font-size: 1.4rem;
   box-shadow: var(--shadow-light);
   background-color: #fff;
-  padding: 2.5rem;
+  color: var(--color-grey-dark-2);
 }
 
-.user-feedback {
-  background-color: yellowgreen;
+.user-reviews {
   flex: 1;
   margin-left: 4.5rem;
+  background-color: yellowgreen;
 }

@@ -213,7 +213,7 @@
 
   &__heading {
     font-size: 2.25rem;
-    font-weight: 100;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     padding: 1rem 2.5rem;
@@ -295,5 +295,56 @@
       font-size: 1.2rem;
       text-transform: uppercase;
     }
+  }
+}
+
+// ***************************************
+// PARAGRAPH
+
+.paragraph {
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+// ***************************************
+// LIST
+.list {
+  list-style: none;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  padding: 1.5rem;
+  margin: 3rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__item::before {
+    content: "";
+    width: 1.75rem;
+    height: 1.75rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+
+    // OLDER BROWSERS
+    // background-image: url("../img/SVG/chevron-right.svg");
+    // background-size: cover;
+
+    // MODERN BROWSERS
+    background-color: var(--color-primary-light);
+    --webkit-mask-image: url("../img/SVG/chevron-right.svg");
+    --webkit-mask-size: cover;
+
+    // OTHER BROWSER SUPPORT
+    mask-image: url("../img/SVG/chevron-right.svg");
+    mask-size: cover;
   }
 }

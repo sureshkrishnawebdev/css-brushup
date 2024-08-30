@@ -309,6 +309,7 @@
 
 // ***************************************
 // LIST
+
 .list {
   list-style: none;
   border-top: var(--line);
@@ -346,5 +347,43 @@
     // OTHER BROWSER SUPPORT
     mask-image: url("../img/SVG/chevron-right.svg");
     mask-size: cover;
+  }
+}
+
+// ***************************************
+// RECOMMENDATION
+
+.recommendation {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+
+  &_description {
+    margin-right: auto;
+  }
+
+  &__people {
+    display: flex;
+  }
+
+  &__photo {
+    box-sizing: content-box;
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.04);
+    transition: all .2s;
+
+    &:not(:last-child) {
+      margin-right: -1.25rem;
+    }
+
+    &:hover {
+      transform: scale(2);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    }
   }
 }

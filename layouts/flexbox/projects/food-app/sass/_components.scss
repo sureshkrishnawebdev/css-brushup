@@ -356,7 +356,6 @@
 .recommendation {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
 
   &_description {
     margin-right: auto;
@@ -385,5 +384,41 @@
       transform: scale(2);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
     }
+  }
+}
+
+// ***************************************
+// REVIEW
+
+.review {
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+
+  &__text {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: var(--line);
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-photo {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  &__user-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: auto;
   }
 }

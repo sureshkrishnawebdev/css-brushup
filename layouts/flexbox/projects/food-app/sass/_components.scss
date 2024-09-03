@@ -238,7 +238,7 @@
     font-size: 1.2rem;
 
     .button-inline {
-      color: var(--color-primary-light);
+      color: var(--color-primary);
     }
   }
 
@@ -451,7 +451,7 @@
   }
 
   &:hover {
-    background-color: var(--color-grey-light-2);
+    background-color: #fff;
 
     span {
       margin-left: 8px;
@@ -475,6 +475,36 @@
     100% {
       transform: scale(1);
       box-shadow: none;
+    }
+  }
+}
+
+// ***************************************
+// CTA BLOCK
+
+.cta-block {
+  padding: 3.5rem 0rem;
+  text-align: center;
+  color: var(--color-grey-dark-2);
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  &__btn {
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding: 1rem 3rem;
+    border-radius: 100px;
+    border: none;
+    background: var(--color-primary-light);
+    color: var(--color-grey-light-1);
+
+    &:focus {
+      outline: none;
     }
   }
 }

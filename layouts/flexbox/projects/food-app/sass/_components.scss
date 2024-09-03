@@ -348,7 +348,7 @@
     transition: all .2s;
 
     &:not(:last-child) {
-      margin-right: -1.25rem;
+      margin-right: -1rem;
     }
 
     &:hover {
@@ -470,7 +470,7 @@
     }
     50% {
       transform: scale(1.05);
-      box-shadow: 0 1rem 2rem var(--color-grey-light-2);
+      box-shadow: 0 1rem 2rem var(--color-grey-light-4);
     }
     100% {
       transform: scale(1);
@@ -495,16 +495,52 @@
   }
 
   &__btn {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 300;
-    padding: 1rem 3rem;
+    text-transform: uppercase;
     border-radius: 100px;
     border: none;
-    background: var(--color-primary-light);
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary));
     color: var(--color-grey-light-1);
+    cursor: pointer;
+    overflow: hidden;
+
+    position: relative;
+
+    &-hidden {
+      display: inline-block;
+      position: absolute;
+      top: -100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding: 1.5rem 0rem;
+      transition: all .2s;
+    }
+
+    &-visible {
+      display: inline-block;
+      padding: 1.5rem 6rem;
+      height: 100%;
+      width: 100%;
+      transition: all .2s;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary));
+
+      .cta-block__btn-hidden {
+        top: 0;
+      }
+
+      .cta-block__btn-visible {
+        transform: translateY(100%);
+      }
+    }
 
     &:focus {
       outline: none;
+      animation: pulsate 1s infinite;
     }
   }
 }

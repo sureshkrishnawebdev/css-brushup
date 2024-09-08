@@ -128,8 +128,17 @@
 .side-nav {
   list-style: none;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: flex;
+    align-items: center;
+  }
+
   &__item {
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+     }
   }
 
   &__item::before {
@@ -149,6 +158,10 @@
   &__item--active::before {
     transform: scaleY(1.5);
     width: 100%;
+
+    @media only screen and (max-width: $bp-medium) {
+      transform: scaleY(1);
+    }
   }
 
   &__item:active::before{
@@ -172,6 +185,18 @@
 
       position: relative;
       z-index: 10;
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 1rem;
+        justify-content: center;
+        margin-top: 0;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        padding: 0.75rem;
+        font-size: 1.25rem;
+      }
     }
   }
 
@@ -180,6 +205,13 @@
     height: 2rem;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -189,6 +221,10 @@
   font-size: 1.2rem;
   color: var(--color-grey-light-1);
   padding: 1.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+   }
 }
 
 // ***************************************
@@ -218,6 +254,11 @@
     letter-spacing: 0.25rem;
     padding: 1rem 2.5rem;
     color: var(--color-grey-dark-2);
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0.75rem 1.75rem;
+      font-size: 1.75rem;
+    }
   }
 
   &__icon-star,
@@ -225,6 +266,11 @@
     width: 2rem;
     height: 2rem;
     fill: var(--color-primary-light);
+
+    @media only screen and (max-width: $bp-small) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
   &__stars {
@@ -239,6 +285,10 @@
 
     .button-inline {
       color: var(--color-primary);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1rem;
     }
   }
 
@@ -257,14 +307,26 @@
 
     align-self: stretch;
 
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
+
     &-average {
       font-size: 2rem;
       margin-bottom: -0.5rem;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.5rem;
+      }
     }
 
     &-count {
       font-size: 1.2rem;
       text-transform: uppercase;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: 0.8rem;
+      }
     }
   }
 }
@@ -328,6 +390,10 @@
   display: flex;
   align-items: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: space-between;
+  }
+
   &_description {
     margin-right: auto;
   }
@@ -368,6 +434,15 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    align-self: stretch;
+  }
 
   &::before {
     content: "\201C";
@@ -486,6 +561,10 @@
   padding: 3.5rem 0rem;
   text-align: center;
   color: var(--color-grey-dark-2);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2.5rem 0;
+  }
 
   &__text {
     font-size: 2rem;

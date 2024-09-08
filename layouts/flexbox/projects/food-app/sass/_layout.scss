@@ -52,6 +52,14 @@
   border-bottom: var(--line);
   font-size: 1.4rem;
   color: var(--color-grey-dark-2);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -61,6 +69,10 @@
   box-shadow: var(--shadow-light);
   background-color: #fff;
   color: var(--color-grey-dark-2);
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem;
+  }
 }
 
 .user-reviews {
@@ -71,4 +83,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-left: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
 }
